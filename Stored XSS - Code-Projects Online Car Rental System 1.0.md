@@ -22,7 +22,6 @@ The `echo` statement outputs user-supplied input (`$result->detail`) without any
 1. **Stored XSS**: Malicious scripts are stored on the server and executed whenever a user visits the page displaying the `pgedetails` parameter.
 2. **Potential for Data Theft**: Attackers can steal cookies, session tokens, or other sensitive data.
 3. **User Redirection**: Malicious scripts can redirect users to phishing or malicious websites.
-4. **Site Defacement**: Attackers can alter page contents, impacting trust in the application.
 
 ---
 
@@ -36,9 +35,14 @@ Select the "FAQs" section and update the `pgedetails` parameter with a malicious
 ```html
 <script>alert(1)</script>
 ```
+<img width="809" alt="XSS - 2" src="https://github.com/user-attachments/assets/5efe8acc-9dcf-4390-8f72-e9e3970eb5f5" />
+
+<img width="370" alt="XSS - 3" src="https://github.com/user-attachments/assets/8f575fd0-1449-4cba-b140-16df86b98f32" />
+
 
 ### **3. Observe the Impact:**  
 Visit `/page.php?type=faqs` to view the stored payload. The injected JavaScript code will execute, demonstrating the vulnerability.
+![XSS - 4](https://github.com/user-attachments/assets/d9525b10-b025-40e3-8029-c491bb103ab7)
 
 ---
 
