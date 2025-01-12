@@ -1,5 +1,3 @@
-## **CVE-XXXX-XXXX: Stored XSS (Authenticated)**
-
 ### **Description:**
 A stored cross-site scripting (XSS) vulnerability exists in the `/page.php?type` endpoint due to the insecure handling of user input in the `pgedetails` parameter. An attacker can inject malicious JavaScript code, which is executed whenever the affected page is viewed.
 
