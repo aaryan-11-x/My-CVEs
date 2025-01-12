@@ -6,13 +6,19 @@ A stored cross-site scripting (XSS) vulnerability exists in the `/page.php?type`
 ### **Steps to Reproduce:**
 1. Login to the application as an admin.
 2. Navigate to `/admin/manage-pages.php` and select any page for editing.
+![XSS - 1](https://github.com/user-attachments/assets/554d26ac-ae29-470e-bdf9-66eab9308689)
+
 3. In the "Package Details" field, enter arbitrary details and capture the request in BurpSuite.
 4. Modify the `pgedetails` parameter to include a malicious payload such as:
    ```html
    <script>alert(1)</script>
    ```
+![XSS - 2](https://github.com/user-attachments/assets/7fb440d7-f527-4a1c-af36-e13f8c88fdd1)
+
 5. Submit the modified request.
 6. Navigate to `/page.php?type=[malicious-page]` to observe the execution of the injected JavaScript payload.
+![XSS - 3](https://github.com/user-attachments/assets/11e762cd-d2bc-49fb-b9ba-44d53b12202d)
+
 
 ### **Impact:**
 This vulnerability enables attackers to:
