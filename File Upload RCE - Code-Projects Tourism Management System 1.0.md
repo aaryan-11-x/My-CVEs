@@ -1,5 +1,3 @@
-## **CVE-XXXX-XXXX: File Upload RCE (Authenticated)**
-
 ### **Description:**
 A vulnerability exists in the `/admin/change-image.php` endpoint of Travel Management System 1.0, allowing an authenticated user to upload arbitrary PHP files without proper validation. This enables remote code execution (RCE) on the server.
 
